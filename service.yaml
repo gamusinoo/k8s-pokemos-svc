@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pokemon-$USER-service
+  namespace: demo-argocd-$USER
+  labels:
+    app: pokemon-$USER
+spec:
+  selector:
+    app: pokemon-$USER
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
