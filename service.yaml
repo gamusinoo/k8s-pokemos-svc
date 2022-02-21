@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: pokemon-$USER-service
-  namespace: demo-argocd-$USER
+  name: pokemon-capside-service
+  namespace: demo-argocd-capside
   labels:
-    app: pokemon-$USER
+    app: pokemon-capside
 spec:
   selector:
-    app: pokemon-$USER
+    app: pokemon-capside
   ports:
     - protocol: TCP
       port: 80
